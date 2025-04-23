@@ -1,0 +1,7 @@
+---
+services:
+  dock:
+    build:
+      context: ./dockerart
+      dockerfile: Dockerfile
+    conteiner_name: art
