@@ -1,6 +1,6 @@
 ---
 services:
-  dock:
+  box:
     build:
       context: ./dockerart
       dockerfile: Dockerfile
