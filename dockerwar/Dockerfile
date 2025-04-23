@@ -8,4 +8,4 @@ RUN tar xvf temp01/tomcat-8.5.50.tar.gz -C temp01
 RUN mv /temp01/apache-tomcat-8.5.50 /usr/local/tomcat
 RUN chmod a+x /usr/local/tomcat/bin/*
 EXPOSE 8080
-CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
+#CMD ["/usr/local/tomcat/bin/catalina.sh", "run"]
