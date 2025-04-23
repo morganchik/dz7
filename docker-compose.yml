@@ -4,7 +4,7 @@ services:
     build:
       context: ./dockerart
       dockerfile: Dockerfile
-    #conteiner_name: art
+    #container_name: art
     volumes:
       - ./vol:/boxfuse-sample-java-war-hello/target
   war:
@@ -13,5 +13,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./vol:/usr/local/tomcat/webapps
+    depends_on:
+      - box
     ports:
       - "8080:8080"
