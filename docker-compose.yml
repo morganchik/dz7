@@ -6,12 +6,12 @@ services:
       dockerfile: Dockerfile
     #conteiner_name: art
     volumes:
-      - ./vol:/boxfuse-sample-java-war-hello
+      - ./vol:/boxfuse-sample-java-war-hello/target
   war:
     build:
       context: ./dockerwar
       dockerfile: Dockerfile
-    #volumes:
-      #- ./vol:
+    volumes:
+      - ./vol:/usr/local/tomcat/webapps
     ports:
       - "8080:8080"
