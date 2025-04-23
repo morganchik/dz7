@@ -7,3 +7,11 @@ services:
     #conteiner_name: art
     volumes:
       - ./vol:/boxfuse-sample-java-war-hello
+  war:
+    build:
+      context: ./dockerwar
+      dockerfile: Dockerfile
+    #volumes:
+      #- ./vol:
+    ports:
+      - "8080:8080"
