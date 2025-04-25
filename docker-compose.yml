@@ -1,19 +1,21 @@
 ---
 services:
-  box:
+  art:
     build:
       context: ./dockerart
       dockerfile: Dockerfile
     #container_name: art
     volumes:
-      - ./vol:/boxfuse-sample-java-war-hello/target
+      - mydata:/boxfuse-sample-java-war-hello/target
   war:
     build:
       context: ./dockerwar
       dockerfile: Dockerfile
     volumes:
-      - ./vol:/usr/local/tomcat/webapps
+      - mydata:/usr/local/tomcat/webapps
     depends_on:
-      - box
+      - art
     ports:
       - "8080:8080"
+volumes:
+    mydata:
